@@ -5,6 +5,7 @@ import sys
 from aiogram import Dispatcher, Bot
 from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
+from aiogram.types import BotCommand
 from aiogram.utils.i18n import FSMI18nMiddleware, I18n
 
 from admin.admin import admin_router
@@ -14,6 +15,18 @@ from routers.send_to_admin import send_router
 from routers.user import user_router
 
 dp = Dispatcher()
+
+
+async def on_startup(dispatcher: Dispatcher, bot: Bot):
+    command_list = [
+        BotCommand(command='start', description='Botni boshlash'),
+        BotCommand(command='help', description='Yordam kerakmi'),
+    ]
+    await bot.set_my_commands(command_list)
+
+
+async def on_shutdown(dispatcher: Dispatcher, bot: Bot):
+    await bot.delete_my_commands()
 
 
 async def main() -> None:
@@ -26,6 +39,8 @@ async def main() -> None:
         admin_router,
         send_router
     )
+    dp.startup.register(on_startup)
+    dp.shutdown.register(on_shutdown)
     await dp.start_polling(bot)
 
 

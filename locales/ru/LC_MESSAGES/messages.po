@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-05-12 20:35+0500\n"
+"POT-Creation-Date: 2024-05-14 11:07+0500\n"
 "PO-Revision-Date: 2024-05-12 19:06+0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -83,7 +83,7 @@ msgstr ""
 "  #IshJoyi \n"
 " ты можешь найти \n"
 "\n"
-"Рекламировать: @Ustoz_Shogird_py_Bot\n"
+"Объявление: @Ustoz_Shogird_py_Bot\n"
 "\n"
 "Админ @sarvar_py_dev"
 
@@ -131,7 +131,15 @@ msgstr "Русский"
 msgid "{lang} tili tanlandi"
 msgstr "{lang} язык  выбран"
 
+#: routers/handler.py:76
+msgid "Botni boshlash"
+msgstr "нажмите, чтобы запустить бота"
+
 #: routers/handler.py:77
+msgid "Yordam kerakmi"
+msgstr "тебе нужна помощь?"
+
+#: routers/handler.py:81
 msgid "Assalomu alaykum! Tanlang."
 msgstr "Assalomu alaykum! Выберите"
 
@@ -266,6 +274,10 @@ msgstr ""
 #: routers/user.py:153
 msgid "‼️ Qo`shimcha ma`lumotlar?"
 msgstr "‼️Дополнительная информация?"
+
+#: routers/user.py:173
+msgid "/start so`zini bosing. E'lon berish qaytadan boshlanadi️"
+msgstr "Нажмите /start. чтобы начать объявление снова "
 
 #~ msgid "kerak"
 #~ msgstr "нужен"

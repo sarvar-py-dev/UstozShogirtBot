@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-05-12 20:35+0500\n"
+"POT-Creation-Date: 2024-05-14 11:07+0500\n"
 "PO-Revision-Date: 2024-05-12 19:06+0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: uz\n"
@@ -106,7 +106,15 @@ msgstr ""
 msgid "{lang} tili tanlandi"
 msgstr ""
 
+#: routers/handler.py:76
+msgid "Botni boshlash"
+msgstr ""
+
 #: routers/handler.py:77
+msgid "Yordam kerakmi"
+msgstr ""
+
+#: routers/handler.py:81
 msgid "Assalomu alaykum! Tanlang."
 msgstr ""
 
@@ -205,6 +213,10 @@ msgstr ""
 
 #: routers/user.py:153
 msgid "‼️ Qo`shimcha ma`lumotlar?"
+msgstr ""
+
+#: routers/user.py:173
+msgid "/start so`zini bosing. E'lon berish qaytadan boshlanadi️"
 msgstr ""
 
 #~ msgid "kerak"

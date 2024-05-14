@@ -166,3 +166,8 @@ async def maqsad(message: Message, state: FSMContext):
     await state.update_data(maqsad=message.text)
     data = await state.get_data()
     await print_data(data, message)
+
+
+@user_router.message()
+async def any(message: Message):
+    await message.answer(_("/start so`zini bosing. E'lon berish qaytadan boshlanadi️"))

@@ -1,7 +1,7 @@
-from aiogram import Router, F
+from aiogram import Router, F, Bot
 from aiogram.filters import CommandStart, Command
 from aiogram.fsm.context import FSMContext
-from aiogram.types import Message, ReplyKeyboardRemove, InlineKeyboardButton, CallbackQuery
+from aiogram.types import Message, ReplyKeyboardRemove, InlineKeyboardButton, CallbackQuery, BotCommand
 from aiogram.utils.i18n import gettext as _, lazy_gettext as __
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 
@@ -64,7 +64,7 @@ async def change_language(message: Message):
 
 
 @handler_router.callback_query(F.data.startswith('lang_'))
-async def languages(callback: CallbackQuery, state: FSMContext):
+async def languages(callback: CallbackQuery, state: FSMContext, bot: Bot):
     lang_code = callback.data.split('lang_')[-1]
     await state.update_data(locale=lang_code)
     if lang_code == 'uz':
@@ -72,7 +72,11 @@ async def languages(callback: CallbackQuery, state: FSMContext):
     else:
         lang = _('Rus', locale=lang_code)
     await callback.answer(_('{lang} tili tanlandi', locale=lang_code).format(lang=lang))
-
+    command_list = [
+        BotCommand(command='start', description=_('Botni boshlash', locale=lang_code)),
+        BotCommand(command='help', description=_('Yordam kerakmi', locale=lang_code)),
+    ]
+    await bot.set_my_commands(command_list)
     rkb = main_keyboard_btn(locale=lang_code)
     msg = _('Assalomu alaykum! Tanlang.', locale=lang_code)
     await callback.message.delete()
