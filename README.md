@@ -56,30 +56,30 @@
 ```bash
 .
 ├── admin # Source code for admin panel
-│   ├── __init__.py
+|   ├── __init__.py
 |   └── admin.py
 |
 ├── keyboards # Source code for keyboards 
-│   ├── __init__.py
-│   └── keyboarsd.py 
-│
+|   ├── __init__.py
+|   └── keyboarsd.py 
+|
 ├── loacals # Locales for changeing language package
-│   ├── ru
+|   ├── ru
 |   |   └── LC_MESSAGES
 |   |   |   ├── messages.mo
 |   |   |   ├── messages.po
-│   ├── uz
+|   ├── uz
 |   |   └── LC_MESSAGES
 |   |   |   ├── messages.mo
 |   |   |   ├── messages.po
 |   └── messages.pot
-│
+|
 ├── routers # routers package for routers
-│   ├── __init__.py
-│   ├── handler.py
-│   ├── send_to_admin.py
-│   └── user.py
-│
+|   ├── __init__.py
+|   ├── handler.py
+|   ├── send_to_admin.py
+|   └── user.py
+|
 ├── .dockerignore
 ├── .env.example
 ├── .gitignore
