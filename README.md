@@ -27,11 +27,6 @@
 
 - ### It's running with docker 
 - ### Your device must be linux and you must be have docker in your terminal
-- ### Firstly open terminal write this command for login docker
-  
-  ```bash
-    docker login
-  ```
 - ### Secondly you pulling image ustoz_shogird_bot
   
   ```bash
@@ -49,6 +44,7 @@
 - <h3>i18 used </h3>
 - <h3>aiogram used</h3>
 - <h3>aiogram State for queue </h3>
+- <h3>Docker file</h3>
 - <h3>Makefile for facilitate some commands</h3>
 
 ## 📂 Project Folder Structure
